@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My first HTML document</title>
+    <script>
+        function SayHello()
+        {
+            alert("Hello Friends!")
+        }
+    </script>
+    <style>
+        p {
+            background: skyblue;
+        }
+        h1 {
+            color: aqua;
+        }
+        #Hello {
+            background: #779d98;
+        }
+        #Image {
+            height: 50%;
+            width: 50%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>First page</h1>
+    <p>This is made in HTML5</p>
+    <input type="text" />
+    <br />
+    <input type="text" />
+    <br />
+    <input id="Hello" type="submit" value ="Hello" onclick = "SayHello()"/>
+    <br />
+    <img id="Image" src="http://img-9gag-ftw.9cache.com/photo/a2P0gWO_700b.jpg" />
+    <script>
+        document.write("<p>This is written with JavaScript</p>");
+        document.write("<h4>This is also written with JavaScript</h4>");
+        document.write("<input type = 'text' /><br>");
+        document.write("<input type = 'text' /><br>");
+        document.write("<input type = 'submit' value = 'Start' onclick = SayHello() /><br>");
+    </script>
+</body>
+</html>
