@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F0126015-212D-47DB-9345-B3E502B7248A}"
+	ProjectSection(SolutionItems) = preProject
+		about-us.html = about-us.html
+		authors.html = authors.html
+		books.html = books.html
+		bookshop.html = bookshop.html
+		FAQ.html = FAQ.html
+		home.html = home.html
+		newsletter.html = newsletter.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
