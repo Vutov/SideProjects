@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "01.Lecture1", "http://localhost:1925", "{E40C67D5-8F68-40A1-9082-F67A3F74E5AE}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1925"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\UniBit\ASP.NET\01.Lecture1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1925\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1925"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\UniBit\ASP.NET\01.Lecture1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1925\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\UniBit\ASP.NET\01.Lecture1\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E40C67D5-8F68-40A1-9082-F67A3F74E5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40C67D5-8F68-40A1-9082-F67A3F74E5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
