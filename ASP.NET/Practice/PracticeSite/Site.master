@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 238px;
+            height: 364px;
+        }
+        .auto-style3 {
+            height: 358px;
+        }
+        .auto-style4 {
+            height: 364px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td>logo</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td class="auto-style1">
+                                    <table style="width: 100%; margin-top: 0px;">
+                                        <tr>
+                                            <td>
+                                                <asp:Menu ID="Menu1" runat="server">
+                                                    <Items>
+                                                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="Home.aspx"></asp:MenuItem>
+                                                        <asp:MenuItem Text="About" Value="New Item" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                                                        <asp:MenuItem Text="blax" Value="New Item" NavigateUrl="~/Blax.aspx"></asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>bla</td>
+                                        </tr>
+                                        <tr>
+                                            <td>bla</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="auto-style4">
+                                    <div>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>foot</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

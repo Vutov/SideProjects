@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        table {
+            border: solid;
+        }
+
+        .auto-style1 {
+            width: 245px;
+        }
+
+        .auto-style2 {
+            width: 930px;
+            height: 151px;
+            margin-top: 0px;
+            text-align: center;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <table style="width: 100%; text-align: center;">
+                <tr>
+                    <td>
+                        <asp:Panel ID="Panel1" runat="server">
+                            <img alt="" class="auto-style2" src="images.jpg" />
+                            <br />
+                            &nbsp;Училище
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td class="auto-style1">
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td>
+                                                <asp:Menu ID="Menu1" runat="server">
+                                                    <Items>
+                                                        <asp:MenuItem Text="Начало" Value="Начало"></asp:MenuItem>
+                                                        <asp:MenuItem Text="Бази Данни" Value="Бази Данни"></asp:MenuItem>
+                                                        <asp:MenuItem Text="бла бла" Value="бла бла"></asp:MenuItem>
+                                                    </Items>
+                                                </asp:Menu>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <center>
+                                                        Register</center>
+                                                </label>
+                                                <center>
+                                                        <asp:Login ID="Login1" runat="server">
+                                                        </asp:Login>
+                                                    </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                                <br />
+                                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Сайт бла бла бла</td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </form>
+</body>
+</html>
