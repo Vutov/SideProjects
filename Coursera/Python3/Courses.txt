@@ -1,0 +1,2 @@
+Learn to Program: The Fundamentals, https://class.coursera.org/programming1-002
+Learn to Program: Crafting Quality Code, https://class.coursera.org/programming2-001
