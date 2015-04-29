@@ -3,6 +3,12 @@ from bs4 import BeautifulSoup
 import re
 
 def getMinsLeft(username, password):
+    '''
+    Gets login info and returns total minutes on the plan and minutes left
+    :param username: str
+    :param password: str
+    :return: (Minutes left, All minutes)
+    '''
     # Login
     with requests.Session() as c:
         url = 'https://www.mtel.bg/login'
@@ -22,6 +28,5 @@ def getMinsLeft(username, password):
         for match in progressBars:
             row = match.find('p').text
             match = re.findall(regex, row)
-            if (match):
-                curData.append(match)
-        return curData
+            if(match):
+                return(match)
