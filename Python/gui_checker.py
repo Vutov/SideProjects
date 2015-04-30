@@ -13,13 +13,12 @@ class Application(tk.Frame):
     def createWidgets(self):
         data = getData()
         for phone in data:
-            self.text = tk.Label(self, text=phone)
+            self.text = tk.Label(self, text=phone, font=("Helvetica", 20))
             # Using grid instead of pack - has row and col, alight(sticky)
             self.text.grid(sticky='W')
 
         self.exit = tk.Button(self, text="Изход", fg="red", command=root.destroy)
         self.exit.grid()
-        # self.exit.pack(side="bottom")
 
 root = tk.Tk()
 root.title = 'Latest topics'
