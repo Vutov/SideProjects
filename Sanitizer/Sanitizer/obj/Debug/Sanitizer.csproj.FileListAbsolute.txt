@@ -1,0 +1,6 @@
+D:\Desktop\Sanitizer\Sanitizer\bin\Debug\Sanitizer.exe.config
+D:\Desktop\Sanitizer\Sanitizer\bin\Debug\Sanitizer.exe
+D:\Desktop\Sanitizer\Sanitizer\bin\Debug\Sanitizer.pdb
+D:\Desktop\Sanitizer\Sanitizer\obj\Debug\Sanitizer.csprojResolveAssemblyReference.cache
+D:\Desktop\Sanitizer\Sanitizer\obj\Debug\Sanitizer.exe
+D:\Desktop\Sanitizer\Sanitizer\obj\Debug\Sanitizer.pdb
