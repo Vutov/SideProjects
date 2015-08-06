@@ -10,7 +10,7 @@
     /// HQC sanitizer, string friendly. Makes your refactoring work much easier.
     /// Keeps original comments and strings as they are, refactores whitespace.
     /// Best used with VS ctr + k, ctr + d. 
-    /// Version 0.15b
+    /// Version 0.15c
     /// </summary>
     public class Sanitizer
     {
@@ -60,8 +60,9 @@
             goodLooking = Regex.Replace(goodLooking, ParentisisInMethodOpeningRegex, "$1 {");
             goodLooking = Regex.Replace(goodLooking, ParentisisInMethodClosingRegex, "},");
 
-            // if-else construction
+            // if-else construction and switch-case
             goodLooking = Regex.Replace(goodLooking, "}\\s+else", "}\nelse");
+            goodLooking = Regex.Replace(goodLooking, "(case[^:]+:)\\s+", "$1\n");
 
             var stringsAfter = Regex.Matches(goodLooking, StringRegex);
             if (stringsBefore.Count != stringsAfter.Count)
