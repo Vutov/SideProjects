@@ -10,7 +10,7 @@
     /// HQC sanitizer, string friendly. Makes your refactoring work much easier.
     /// Keeps original comments and strings as they are, refactores whitespace.
     /// Best used with VS ctr + k, ctr + d. 
-    /// Version 0.15c
+    /// Version 0.15d
     /// </summary>
     public class Sanitizer
     {
@@ -20,7 +20,7 @@
             var replacedComments = new HashSet<string>();
 
             // Regex
-            const string StringRegex = "(\"[^\"]+\")";
+            const string StringRegex = "(\"[^\"]*\")";
             const string CommentsRegex = @"^(?:[ ]+?)?(\/\/[^\/]+?)$";
             const string StarCommentsRegex = @"(/\*[\s\S]+?\*/)";
             const string PropertiesRegex = @"\s+{[\s]+?(get;)\s+?([\s\S]+?set;)\s+?}";
