@@ -23,7 +23,7 @@
             const string StringRegex = "(\"[^\"]*\")";
             const string CommentsRegex = @"^(?:[ ]+?)?(\/\/[^\/]+?)$";
             const string StarCommentsRegex = @"(/\*[\s\S]+?\*/)";
-            const string PropertiesRegex = @"\s+{[\s]+?(get;)\s+?([\s\S]+?set;)\s+?}";
+            const string PropertiesRegex = @"\s*{[\s]*?(get;)\s+?([\s\S]*?(?:set;)?)\s*?}";
             const string ParentisisInMethodOpeningRegex = @"(\]|=>)\s+{\s+";
             const string ParentisisInMethodClosingRegex = @"\s+}\s+,";
 
