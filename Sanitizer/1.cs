@@ -21,7 +21,7 @@ namespace Huy_Phuong
     Text;
     using System.Threading;
 
-    // Do not modify the interface members
+    // Do not      modify the interface members
     // Moving the interface to separate namespace is allowed
     // Adding XML documentation is allowed
     // TODO: document this interface definition

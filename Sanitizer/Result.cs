@@ -1,4 +1,4 @@
- using System.Collections.Generic;
+using System.Collections.Generic;
  using System.Globalization;
  using System.Linq;
  /*//////////////////////////////////////
@@ -13,23 +13,31 @@
  using System;
  using System.Text;
  using System.Threading;
- // Do not modify the interface members
- // Moving the interface to separate namespace is allowed
- // Adding XML documentation is allowed
- // TODO: document this interface definition
+ // Do not modify the interface members 
+// Moving the interface to separate namespace is allowed
+ 
+// Adding XML documentation is allowed
+ 
+// TODO: document this interface definition
  internal interface IPerformanceDatabase 
 {
- // TODO: document this method, its parameters, return value, exceptions, etc.
+ 
+// TODO: document this method, its parameters, return value, exceptions, etc.
 void AddTheatre(string theatreName);
- // TODO: document this method, its parameters, return value, exceptions, etc.
+ 
+// TODO: document this method, its parameters, return value, exceptions, etc.
 IEnumerable<string> ListTheatres();
- // TODO: document this method, its parameters, return value, exceptions, etc.
+ 
+// TODO: document this method, its parameters, return value, exceptions, etc.
 void AddPerformance(string theatreName, string performanceTitle, DateTime startDateTime, TimeSpan duration, decimal price);
- // TODO: document this method, its parameters, return value, exceptions, etc.
+ 
+// TODO: document this method, its parameters, return value, exceptions, etc.
 IEnumerable<BuoiDien> ListAllPerformances();
- // TODO: document this method, its parameters, return value, exceptions, etc.
+ 
+// TODO: document this method, its parameters, return value, exceptions, etc.
 IEnumerable<BuoiDien> ListPerformances(string theatreName);
 }
+
  internal class TheatreNotFoundException : Exception 
 {
  public TheatreNotFoundException(string msg) : base(msg) 
@@ -37,6 +45,7 @@ IEnumerable<BuoiDien> ListPerformances(string theatreName);
  
 }
 }
+
  internal partial class NhaHat
 {
 public static IPerformanceDatabase universal = new BuổIDiễNDatabase();
@@ -50,6 +59,7 @@ if (chiHuyLine == null)
 {
 return;
 }
+
  if (chiHuyLine != string.Empty) 
 {
  string[] chiHuyParts = chiHuyLine.Split('(');
@@ -61,11 +71,7 @@ switch (chiHuy)
 {
 case "AddTheatre":chiHuyParts = chiHuyLine.Split('(');
 chiHuy = chiHuyParts[0];
-string[] chiHuyParts1 = chiHuyLine.Split( new[] 
-{
- '(', ',', ')' 
-}
-, StringSplitOptions.RemoveEmptyEntries);
+string[] chiHuyParts1 = chiHuyLine.Split( new[] {'(', ',', ')'}, StringSplitOptions.RemoveEmptyEntries);
 string[] chiHuyParams1 = chiHuyParts1.Skip (1).Select(p => p.Trim()).ToArray();
 string [] chiHuyParams = chiHuyParams1;
  chiHuyResult = Class1.ExecuteAddTheatreCommand(chiHuyParams);
@@ -74,11 +80,7 @@ string [] chiHuyParams = chiHuyParams1;
 break;
 case "AddPerformance": chiHuyParts = chiHuyLine.Split('(');
  chiHuy = chiHuyParts[0];
- chiHuyParts1 = chiHuyLine.Split(new[] 
-{
- '(', ',', ')' 
-}
-, StringSplitOptions.RemoveEmptyEntries);
+ chiHuyParts1 = chiHuyLine.Split(new[] {'(', ',', ')'}, StringSplitOptions.RemoveEmptyEntries);
  chiHuyParams1 = chiHuyParts1.Skip(1).Select(p => p.Trim()).ToArray();
  chiHuyParams = chiHuyParams1;
  string theatreName = chiHuyParams[0];
@@ -96,43 +98,38 @@ case "PrintAllPerformances": chiHuyResult = ExecutePrintAllPerformancesCommand()
  break;
  case "PrintPerformances": chiHuyParts = chiHuyLine.Split('(');
 chiHuy = chiHuyParts[0];
- chiHuyParts1 = chiHuyLine.Split( new[] 
-{
- '(', ',', ')' 
-}
-, StringSplitOptions.RemoveEmptyEntries);
+ chiHuyParts1 = chiHuyLine.Split( new[] {'(', ',', ')'}, StringSplitOptions.RemoveEmptyEntries);
  chiHuyParams1 = chiHuyParts1.Skip(1).Select(p => p.Trim()).ToArray();
  chiHuyParams = chiHuyParams1;
  string theatre = chiHuyParams[0];
- var performances = universal.ListPerformances(theatre).Select(p =>
-{
- string result1 = p.s2.ToString("dd.MM.yyyy HH:mm");
- return string.Format("({0}, {1})", p.tr32, result1);
-}
-).ToList();
+ var performances = universal.ListPerformances(theatre).Select(p => {string result1 = p.s2.ToString("dd.MM.yyyy HH:mm");
+ return string.Format("({0}, {1})", p.tr32, result1);}).ToList();
  if (performances.Any())
 {
  chiHuyResult = string.Join(", ", performances);
 }
- else 
+else 
 {
  chiHuyResult = "No performances";
 }
+
 break;
 default:chiHuyResult = "Invalid command!";
  break;
 }
 }
+
  catch (Exception ex) 
 {
  chiHuyResult = "Error: " + ex.Message;
 }
+
  Console.WriteLine(chiHuyResult);
 }
 }
- 
 }
 }
+
  public class TimeDurationOverlapException : Exception 
 {
  public TimeDurationOverlapException(string msg) : base(msg)
@@ -140,6 +137,7 @@ default:chiHuyResult = "Invalid command!";
 
 }
 }
+
 public class BuoiDien : IComparable<BuoiDien> 
 {
  public BuoiDien(string tr23, string tr32, DateTime s2, TimeSpan thoiGian, decimal gia) 
@@ -150,42 +148,30 @@ public class BuoiDien : IComparable<BuoiDien>
  this.ThoiGian = thoiGian;
 this.gia = gia;
 }
- public string tr23 
-{
- get;
- protected internal set;
-}
-public string tr32 
-{
- get;
- private set;
-}
-public DateTime s2 
-{
- get;
- set;
-}
- public TimeSpan ThoiGian 
-{
- get;
- private set;
-}
- protected internal decimal gia 
-{
- get;
- protected set;
-}
+
+ public string tr23 { get;  protected internal set;}
+
+public string tr32 { get;  private set;}
+
+public DateTime s2 { get;  set;}
+
+ public TimeSpan ThoiGian { get;  private set;}
+
+ protected internal decimal gia { get;  protected set;}
+
  int IComparable<BuoiDien>.CompareTo(BuoiDien otherBuoiDien) 
 {
  int tmp = this.s2.CompareTo(otherBuoiDien.s2);
 return tmp;
 }
+
  public override string ToString() 
 {
  string result = string.Format( "BuoiDien(Tr32: {0}; Tr23: {1}; s2: {2}, ThoiGian: {3}, Gia: {4})", this.tr23, this.tr32, this.s2.ToString("dd.MM.yyyy HH:mm"),this.ThoiGian.ToString("hh':'mm"),this.gia.ToString("f2"));
  return result;
 }
 }
+
  internal class BuổIDiễNDatabase : IPerformanceDatabase 
 {
  private readonly SortedDictionary<string, SortedSet<BuoiDien>> sortedDictionaryStringSortedSetPerformance = new SortedDictionary<string, SortedSet<BuoiDien>>();
@@ -195,8 +181,10 @@ if (!this.sortedDictionaryStringSortedSetPerformance.ContainsKey(tt))
 {
  throw new DuplicateTheatreException("Duplicate theatre");
 }
+
  this.sortedDictionaryStringSortedSetPerformance[tt] = new SortedSet<BuoiDien>();
 }
+
  class DuplicateTheatreException : Exception 
 {
  public DuplicateTheatreException(string msg) : base(msg) 
@@ -204,26 +192,31 @@ if (!this.sortedDictionaryStringSortedSetPerformance.ContainsKey(tt))
  
 }
 }
+
  public IEnumerable<string> ListTheatres()
 {
 var t2 = this.sortedDictionaryStringSortedSetPerformance.Keys;
  return t2;
 }
+
  void IPerformanceDatabase.AddPerformance(string tt, string pp, DateTime s2, TimeSpan thoiGian, decimal gia)
 {
 if (!this.sortedDictionaryStringSortedSetPerformance.ContainsKey(tt)) 
 {
  throw new TheatreNotFoundException("Theatre does not exist");
 }
+
  var ps = this.sortedDictionaryStringSortedSetPerformance[tt];
  var e2 = s2 + thoiGian;
 if (kiemTra(ps, s2, e2))
 {
  throw new TimeDurationOverlapException("Time/duration overlap");
 }
+
  var p = new BuoiDien(tt, pp, s2, thoiGian, gia);
 ps.Add(p);
 }
+
  public IEnumerable<BuoiDien> ListAllPerformances() 
 {
  var theatres = this.sortedDictionaryStringSortedSetPerformance.Keys;
@@ -233,17 +226,21 @@ foreach (var t in theatres)
 var performances = this.sortedDictionaryStringSortedSetPerformance[t];
  result2.AddRange(performances);
 }
+
  return result2;
 }
+
  IEnumerable<BuoiDien> IPerformanceDatabase.ListPerformances(string theatreName) 
 {
  if (!this.sortedDictionaryStringSortedSetPerformance.ContainsKey(theatreName)) 
 {
  throw new TheatreNotFoundException("Theatre does not exist");
 }
+
 var asfd = this.sortedDictionaryStringSortedSetPerformance[theatreName];
  return asfd;
 }
+
  protected internal static bool kiemTra( IEnumerable < BuoiDien > performances , DateTime ss2 , DateTime ee2) 
 {
  foreach (var p in performances) 
@@ -256,9 +253,8 @@ if (kiemTra)
  return true;
 }
 }
+
  return false;
 }
 }
- 
 }
- 
