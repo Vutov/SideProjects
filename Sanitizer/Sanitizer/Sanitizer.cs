@@ -10,7 +10,7 @@
     /// HQC sanitizer, string friendly. Makes your refactoring work much easier.
     /// Keeps original comments and strings as they are, refactores whitespace.
     /// Best used with VS ctr + k, ctr + d. 
-    /// Version 0.15d
+    /// Version 0.21b
     /// </summary>
     public class Sanitizer
     {
@@ -63,6 +63,9 @@
             // if-else construction and switch-case
             goodLooking = Regex.Replace(goodLooking, "}\\s+else", "}\nelse");
             goodLooking = Regex.Replace(goodLooking, "(case[^:]+:)\\s+", "$1\n");
+
+            // for-loop
+            goodLooking = Regex.Replace(goodLooking, "(for[^;]+);\\s*([^;]+);\\s*([^{]+{)", "$1; $2; $3");
 
             var stringsAfter = Regex.Matches(goodLooking, StringRegex);
             if (stringsBefore.Count != stringsAfter.Count)
@@ -117,6 +120,21 @@
             }
 
             File.WriteAllText("../../../Result.cs", goodLooking.Trim());
+
+            // Cyrillic symbols
+            var cyrillic = Regex.Matches(goodLooking, @"[\s\S]{0,10}([а-яА-Я]+)[\s\S]{0,10}");
+            if (cyrillic.Count != 0)
+            {
+                Console.WriteLine("Cyrillic letters found:");
+                var index = 0;
+                foreach (Match line in cyrillic)
+                {
+                    var allText = Regex.Replace(line.Groups[0].Value, "\\s+", " ");
+                    var cyrillicText = line.Groups[1].Value;
+                    Console.WriteLine("{0}. \"{1}\"\n *Cyrillic: {2}", index, allText, cyrillicText);
+                    index++;
+                }
+            }
         }
     }
 }
