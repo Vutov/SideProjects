@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script>
+            function Counter() {
+                if (!(this instanceof Counter)) {
+                    return new Counter();
+                }
+
+                var timer = null;
+                var input = null;
+
+                function getElement(id) {
+                    var item = document.getElementById(id);
+
+                    return item;
+                }
+
+                function getValue(element) {
+                    var value = parseInt(element.value);
+
+                    return value;
+                }
+
+                function setValue(element, value) {
+                    return element.value = value;
+                }
+
+                function sum(first, second) {
+                    var result = parseInt(first) + parseInt(second);
+
+                    return result;
+                }
+
+                function start() {
+                    if (input === null) {
+                        return false;
+                    }
+
+                    var number = getValue(input);
+                    if (timer === null) {
+                        timer = setInterval(function () {
+                            number = sum(number, 1);
+                            return setValue(input, number);
+                        }, 1000);
+
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                function stop() {
+                    if (timer !== null) {
+                        clearInterval(timer);
+                        timer = null;
+
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                function setHtml() {
+                    var item = getElement('container');
+                    input = document.createElement('input');
+                    input.type = 'text';
+                    input.setAttribute('value', 0);
+
+                    var startButton = document.createElement('button');
+                    startButton.addEventListener('click', start);
+                    startButton.innerHTML = 'start';
+
+                    var stopButton = document.createElement('button');
+                    stopButton.addEventListener('click', stop);
+                    stopButton.innerHTML = 'stop';
+
+                    item.appendChild(input);
+                    item.appendChild(startButton);
+                    item.appendChild(stopButton);
+
+                    return true;
+                }
+
+                this.init = setHtml;
+
+                this.start = start;
+
+                this.stop = stop;
+
+                return this;
+            }
+        </script>
+    </body>
+</html>
+</body>
+</html>

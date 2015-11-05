@@ -10,3 +10,9 @@ D:\SideProjects\Sanitizer\Sanitizer\obj\Debug\Sanitizer.pdb
 D:\SideProjects\Sanitizer\Sanitizer\bin\Debug\Sanitizer.exe
 D:\SideProjects\Sanitizer\Sanitizer\bin\Debug\Sanitizer.pdb
 D:\SideProjects\Sanitizer\Sanitizer\obj\Debug\Sanitizer.csprojResolveAssemblyReference.cache
+C:\SideProjects\Sanitizer\Sanitizer\bin\Debug\Sanitizer.exe.config
+C:\SideProjects\Sanitizer\Sanitizer\obj\Debug\Sanitizer.exe
+C:\SideProjects\Sanitizer\Sanitizer\obj\Debug\Sanitizer.pdb
+C:\SideProjects\Sanitizer\Sanitizer\bin\Debug\Sanitizer.exe
+C:\SideProjects\Sanitizer\Sanitizer\bin\Debug\Sanitizer.pdb
+C:\SideProjects\Sanitizer\Sanitizer\obj\Debug\Sanitizer.csprojResolveAssemblyReference.cache

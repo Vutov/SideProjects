@@ -1,0 +1,18 @@
+C:\Users\Spas\Desktop\Production\Production\bin\Debug\Production.exe.config
+C:\Users\Spas\Desktop\Production\Production\bin\Debug\Production.exe
+C:\Users\Spas\Desktop\Production\Production\bin\Debug\Production.pdb
+C:\Users\Spas\Desktop\Production\Production\obj\Debug\Production.csprojResolveAssemblyReference.cache
+C:\Users\Spas\Desktop\Production\Production\obj\Debug\Production.exe
+C:\Users\Spas\Desktop\Production\Production\obj\Debug\Production.pdb
+C:\Users\Spas\Desktop\Day2\02.Production\Production\bin\Debug\Production.exe.config
+C:\Users\Spas\Desktop\Day2\02.Production\Production\obj\Debug\Production.exe
+C:\Users\Spas\Desktop\Day2\02.Production\Production\obj\Debug\Production.pdb
+C:\Users\Spas\Desktop\02.Production\Production\bin\Debug\Production.exe.config
+C:\Users\Spas\Desktop\02.Production\Production\obj\Debug\Production.exe
+C:\Users\Spas\Desktop\02.Production\Production\obj\Debug\Production.pdb
+C:\Users\Spas\Desktop\02.Production\Production\bin\Debug\Production.exe
+C:\Users\Spas\Desktop\02.Production\Production\bin\Debug\Production.pdb
+C:\Users\Spas\Desktop\02.Production\Production\obj\Debug\Production.csprojResolveAssemblyReference.cache
+C:\Users\Spas\Desktop\SBTech\Day6\Design Patterns\Production\bin\Debug\Production.exe.config
+C:\Users\Spas\Desktop\SBTech\Day6\Design Patterns\Production\obj\Debug\Production.exe
+C:\Users\Spas\Desktop\SBTech\Day6\Design Patterns\Production\obj\Debug\Production.pdb

@@ -1,0 +1,14 @@
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\bin\Debug\SchoolSystem.exe.config
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\obj\Debug\SchoolSystem.csprojResolveAssemblyReference.cache
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\bin\Debug\SchoolSystem.exe
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\bin\Debug\SchoolSystem.pdb
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\obj\Debug\SchoolSystem.exe
+c:\users\training\documents\visual studio 2013\Projects\SchoolSystem\SchoolSystem\obj\Debug\SchoolSystem.pdb
+C:\Users\Spas\Desktop\System\SchoolSystem\bin\Debug\SchoolSystem.exe.config
+C:\Users\Spas\Desktop\System\SchoolSystem\obj\Debug\SchoolSystem.exe
+C:\Users\Spas\Desktop\System\SchoolSystem\obj\Debug\SchoolSystem.pdb
+C:\Users\Spas\Desktop\System\SchoolSystem\bin\Debug\SchoolSystem.exe
+C:\Users\Spas\Desktop\System\SchoolSystem\bin\Debug\SchoolSystem.pdb
+C:\Users\Spas\Desktop\System\SchoolSystem\obj\Debug\SchoolSystem.csprojResolveAssemblyReference.cache
+C:\Users\Spas\Desktop\System\SchoolSystem\bin\Debug\PowerCollections.dll
+C:\Users\Spas\Desktop\System\SchoolSystem\bin\Debug\PowerCollections.xml

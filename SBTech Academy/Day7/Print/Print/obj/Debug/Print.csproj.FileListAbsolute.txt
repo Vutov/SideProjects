@@ -1,0 +1,6 @@
+C:\Users\Spas\Desktop\Print\Print\bin\Debug\Print.exe.config
+C:\Users\Spas\Desktop\Print\Print\bin\Debug\Print.exe
+C:\Users\Spas\Desktop\Print\Print\bin\Debug\Print.pdb
+C:\Users\Spas\Desktop\Print\Print\obj\Debug\Print.csprojResolveAssemblyReference.cache
+C:\Users\Spas\Desktop\Print\Print\obj\Debug\Print.exe
+C:\Users\Spas\Desktop\Print\Print\obj\Debug\Print.pdb

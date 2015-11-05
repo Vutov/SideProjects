@@ -1,0 +1,6 @@
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\bin\Debug\01.CowsAndBulls.exe.config
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\bin\Debug\01.CowsAndBulls.exe
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\bin\Debug\01.CowsAndBulls.pdb
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\obj\Debug\01.CowsAndBulls.csprojResolveAssemblyReference.cache
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\obj\Debug\01.CowsAndBulls.exe
+C:\Users\Spas\Desktop\01.CowsAndBulls\01.CowsAndBulls\obj\Debug\01.CowsAndBulls.pdb

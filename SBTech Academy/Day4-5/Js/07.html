@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        function StopWatch() {
+            var startTime,
+                currentTime,
+                html,
+                minute,
+                sec,
+                ms,
+                buttons,
+                timer = null,
+                isPaused = false,
+                inReverse = false;
+
+            function getElement(id) {
+                return document.getElementById(id);
+            }
+
+            function getValue(element) {
+                return parseInt(element.value);
+            }
+
+            function setValue(element, value) {
+                return element.value = value;
+            }
+
+            function addTrailingZeros(number, zeros) {
+                var zerosString = "";
+                for (var i = 0; i < zeros; i++) {
+                    zerosString += '0';
+                }
+                return (zerosString + number).slice(-zeros);
+            }
+
+            function updateTimer() {
+                currentTime = new Date();
+
+                //console.log(startTime);
+                // TODO check for same time min 3 === 3 ect.
+                var timeDiff = currentTime.getTime() - startTime.getTime();
+                //console.log("curr time: " + currentTime);
+                //console.log("start time: " + startTime);
+
+                var displayMin = Math.abs(Math.floor((timeDiff / 1000) / 60));
+                displayMin = addTrailingZeros(displayMin, 2);
+                //console.log("min: " + displayMin);
+                var displaySec = Math.abs((timeDiff / 1000) % 60);
+                //console.log("sec: " + displaySec);
+
+                var displayMs = Math.abs((displaySec % 1).toFixed(3) * 1000);
+
+                displaySec = displaySec.toFixed(0);
+                displaySec = addTrailingZeros(displaySec, 2);
+                if (displaySec === '60') {
+                    displaySec = '00';
+                }
+
+                displayMs = addTrailingZeros(displayMs, 3);
+
+                //console.log("ms:" + displayMs);
+
+                if (!isPaused) {
+                    setValue(minute, displayMin);
+                    setValue(sec, displaySec);
+                    setValue(ms, displayMs);
+                }
+
+                if (inReverse) {
+                    if (currentTime > startTime) {
+                        stop();
+
+                        setValue(ms, '000');
+                    }
+                }
+
+                //TODO return
+            }
+
+            function getInputTime() {
+                var minutes = getValue(minute);
+                var seconds = getValue(sec);
+                var miliseconds = getValue(ms);
+
+                var startDateAndTime = new Date();
+                startDateAndTime.setMinutes(startDateAndTime.getMinutes() + minutes);
+                startDateAndTime.setSeconds(startDateAndTime.getSeconds() + seconds);
+                startDateAndTime.setMilliseconds(startDateAndTime.getMilliseconds() + miliseconds);
+
+                return startDateAndTime;
+            }
+
+            function update() {
+                timer = setInterval(updateTimer, 1);
+
+                //TODO return
+            }
+
+            function start() {
+                if (timer === null) {
+                    startTime = new Date();
+                    inReverse = false;
+                    update();
+                } else {
+                    // TODO no timer
+                }
+
+                //TODO return validate timer for double starting
+            }
+
+            function stop() {
+                if (timer !== null) {
+                    clearInterval(timer);
+                    timer = null;
+                    isPaused = false;
+
+                    // TODO return
+                }
+
+                //TODO return
+            }
+
+            function reverse() {
+                if (timer === null) {
+                    startTime = getInputTime();
+                    inReverse = true;
+                    update();
+                } else {
+                    // TODO no timer
+                }
+
+                //TODO return validate timer for double starting
+            }
+
+            function reset() {
+                stop();
+                start();
+
+                //TODO return
+            }
+
+            function pause() {
+                isPaused = !isPaused;
+
+                //TODO return
+            }
+
+            function del() {
+                var element = getElement('container');
+                stop();
+                element.removeChild(html);
+
+                //TODO kill object
+                //TODO return
+            }
+
+            function handler(e) {
+                // TODO fix
+                //if (!(e instanceof Event)) {
+                //    return false;
+                //}
+
+                // TODO target better way
+                switch (e.target.innerText) {
+                    case 'start':
+                        start();
+                        break;
+                    case 'stop':
+                        stop();
+                        break;
+                    case 'pause':
+                        pause();
+                        break;
+                    case 'reset':
+                        reset();
+                        break;
+                    case 'delete':
+                        del();
+                        break;
+                    case 'reverse':
+                        reverse();
+                        break;
+                    default:
+                        // TODO return
+                }
+
+                // TODO return
+            }
+
+            function createInput(type, text) {
+                var element = document.createElement(type);
+                element.style.paddingLeft = '10px';
+                element.value = text;
+
+                return element;
+            }
+
+            function createHtml(type, text) {
+                var element = document.createElement(type);
+                element.innerHTML = text;
+
+                return element;
+            }
+
+            function seed() {
+                var element = getElement('container');
+
+                html = document.createElement('div'); // todo func
+                html.addEventListener('click', handler);
+
+                var display = document.createElement('div');
+
+                minute = createInput('input', '00');
+                display.appendChild(minute);
+
+                sec = createInput('input', '00');
+                display.appendChild(sec);
+
+                ms = createInput('input', '000');
+                display.appendChild(ms);
+
+                html.appendChild(display);
+
+                buttons = document.createElement('div');
+
+                var startButton = createHtml('button', 'start');
+                buttons.appendChild(startButton);
+
+                var stopButton = createHtml('button', 'stop');
+                buttons.appendChild(stopButton);
+
+                var pauseButton = createHtml('button', 'pause');
+                buttons.appendChild(pauseButton);
+
+                var resetButton = createHtml('button', 'reset');
+                buttons.appendChild(resetButton);
+
+                var deleteButton = createHtml('button', 'delete');
+                buttons.appendChild(deleteButton);
+
+                var reverseButton = createHtml('button', 'reverse');
+                buttons.appendChild(reverseButton);
+
+                html.appendChild(buttons);
+                element.appendChild(html);
+
+                //TODO return
+            }
+
+            function init() {
+                seed();
+                return {
+                    start: start,
+                    stop: stop,
+                    reset: reset,
+                    pause: pause,
+                    del: del,
+                    reverse: reverse
+                }
+            }
+
+            return init();
+        }
+
+        var a = new StopWatch();
+    </script>
+</body>
+</html>

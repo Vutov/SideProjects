@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="text" id='antoan' value="0" />
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <script>
+        function GetElement(id) {
+            var item = document.getElementById(id);
+
+            return item;
+        }
+
+        function GetValue(element) {
+            var value = parseInt(element.value);
+
+            return value;
+        }
+
+        function SetValue(element, value) {
+            return element.value = value;
+        }
+
+        function Sum(first, second) {
+            var sum = parseInt(first) + parseInt(second);
+
+            return sum;
+        }
+
+        var timer = null;
+
+        function start() {
+            var item = GetElement('antoan');
+            var number = GetValue(item);
+            if (timer === null) {
+                timer = setInterval(function () {
+                    number = Sum(number, 1);
+                    return SetValue(item, number);
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            if (timer !== null) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+    </script>
+</body>
+</html>

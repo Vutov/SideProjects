@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <div id="container"></div>
+
+        <script>
+            function getElement(id) {
+                return document.getElementById(id);
+            }
+
+            function getValue(element) {
+                return parseInt(element.value);
+            }
+
+            function setValue(element, value) {
+                return element.value = value;
+            };
+
+            function sum(first, second) {
+                return parseInt(first) + parseInt(second);
+            }
+
+            function Counter() {
+                if (!(this instanceof Counter)) {
+                    return new Counter();
+                }
+
+                this.timer = null;
+                this.html = null;
+                this.input = null;
+                this.startButton = null;
+                this.stopButton = null;
+                this.counter = 0;
+
+                return this;
+            }
+
+            Counter.prototype.incrementCounter = function () {
+                this.counter = sum.call(this, this.counter, 1);
+                return setValue.call(this, this.input, this.counter);
+            };
+
+
+            Counter.prototype.init = function () {
+                // TODO single event listener
+                this.html = document.createElement('div');
+
+                this.input = document.createElement('input');
+                this.input.type = 'text';
+                this.input.setAttribute('value', this.counter);
+                this.html.appendChild(this.input);
+
+                this.startButton = document.createElement('button');
+                this.startButton.addEventListener('click', this.start.bind(this));
+                this.startButton.innerHTML = 'start';
+                this.html.appendChild(this.startButton);
+
+                this.stopButton = document.createElement('button');
+                this.stopButton.addEventListener('click', this.stop.bind(this));
+                this.stopButton.innerHTML = 'stop';
+                this.html.appendChild(this.stopButton);
+
+                getElement.call(this, 'container').appendChild(this.html);
+
+                return true;
+            };
+
+            Counter.prototype.start = function () {
+                if (this.input === null) {
+                    return false;
+                }
+
+                this.counter = getValue(this.input);
+                if (this.timer === null) {
+                    this.timer = setInterval(this.incrementCounter.bind(this), 1000);
+
+                    return true;
+                }
+
+                return false;
+            };
+
+            Counter.prototype.stop = function () {
+                if (this.timer !== null) {
+                    clearInterval(this.timer);
+                    this.timer = null;
+
+                    return true;
+                }
+
+                return false;
+            };
+        </script>
+    </body>
+</html>
+</body>
+</html>

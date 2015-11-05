@@ -1,0 +1,98 @@
+Random Number Generated: 5879
+Valid: 2314
+Bulls: 0, Cows: 0
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Try Again! Invalid: 21345
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Try Again! Invalid: 21345
+Try Again! Invalid: 1231
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Try Again! Invalid: 21345
+Try Again! Invalid: 1231
+Try Again! Invalid: 1
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Try Again! Invalid: 21345
+Try Again! Invalid: 1231
+Try Again! Invalid: 1
+Try Again! Invalid: 2
+Random Number Generated: 8172
+Try Again! Invalid: 1
+Try Again! Invalid: 21345
+Try Again! Invalid: 1231
+Try Again! Invalid: 1
+Try Again! Invalid: 2
+Valid: 1234
+Bulls: 0, Cows: 2
+Random Number Generated: 2065
+Try Again! Invalid: sdsdsadas
+Try Again! Invalid: 123214324
+Try Again! Invalid: 123214324
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Try Again! Invalid: 1233
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Try Again! Invalid: 1233
+Try Again! Invalid: 1231
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Try Again! Invalid: 1233
+Try Again! Invalid: 1231
+Valid: 1234
+Bulls: 1, Cows: 1
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Try Again! Invalid: 1233
+Try Again! Invalid: 1231
+Valid: 1234
+Bulls: 1, Cows: 1
+Valid: 4610
+Bulls: 1, Cows: 0
+Random Number Generated: 4837
+Try Again! Invalid: 1232432432
+Try Again! Invalid: 1233
+Try Again! Invalid: 1233
+Try Again! Invalid: 1231
+Valid: 1234
+Bulls: 1, Cows: 1
+Valid: 4610
+Bulls: 1, Cows: 0
+Valid: 5421
+Bulls: 0, Cows: 1
+Random Number Generated: 5013
+Try Again! Invalid: afsdfbfdbdfsdc
+Try Again! Invalid: 3254365465
+Try Again! Invalid: 1111
+Random Number Generated: 5013
+Try Again! Invalid: afsdfbfdbdfsdc
+Try Again! Invalid: 3254365465
+Try Again! Invalid: 1111
+Valid: 2345
+Bulls: 0, Cows: 2
+Random Number Generated: 5013
+Try Again! Invalid: afsdfbfdbdfsdc
+Try Again! Invalid: 3254365465
+Try Again! Invalid: 1111
+Valid: 2345
+Bulls: 0, Cows: 2
+Valid: 5024
+Bulls: 2, Cows: 0
+Random Number Generated: 1473
+Valid: 1473
+Congratulations you guessed the number 1473
+Game Over!

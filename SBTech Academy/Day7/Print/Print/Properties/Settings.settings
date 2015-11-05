@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Print.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ReportFormatter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LetterReportFormatter</Value>
+    </Setting>
+    <Setting Name="NameSpace" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Print.Formatters</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

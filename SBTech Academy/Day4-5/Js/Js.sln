@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C38F0882-E25B-472B-B743-F577F60061F6}"
+	ProjectSection(SolutionItems) = preProject
+		01.html = 01.html
+		02.html = 02.html
+		03.html = 03.html
+		04.html = 04.html
+		05.html = 05.html
+		06.html = 06.html
+		07.html = 07.html
+		08.html = 08.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
