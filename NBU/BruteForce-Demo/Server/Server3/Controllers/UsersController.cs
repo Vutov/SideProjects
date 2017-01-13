@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Server.Controllers
+﻿namespace Server.Controllers
 {
+    using System.Web.Http;
     using Models;
     using Repository;
 
-    [Route("api/[controller]")]
-    public class UsersController : Controller
+    [RoutePrefix("api/users")]
+    public class UsersController : ApiController
     {
         private readonly Repository _repository;
 
@@ -17,7 +16,7 @@ namespace Server.Controllers
 
         [HttpPost]
         [Route("login")]
-        public IActionResult Login(LoginBindingModel model)
+        public IHttpActionResult Login(LoginBindingModel model)
         {
             if (model == null)
             {
@@ -44,7 +43,7 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("passwords")]
-        public IActionResult GetHashedPasswords()
+        public IHttpActionResult GetHashedPasswords()
         {
             return this.Ok(this._repository.GetPasswords());
         }

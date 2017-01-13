@@ -1,10 +1,11 @@
 ﻿namespace Server.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
+    using System.Web.Http;
 
-    [Route("api/[controller]")]
-    public class HomeController: Controller
+    [RoutePrefix("")]
+    public class HomeController: ApiController
     {
+        [Route("")]
         public string Get()
         {
             return "Api working";

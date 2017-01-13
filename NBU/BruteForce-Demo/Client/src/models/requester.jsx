@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const baseUrl = "http://localhost:61372/api/";
+const baseUrl = "http://localhost:51610/api/";
 
 function get(uri) {
     const url = baseUrl + uri;
